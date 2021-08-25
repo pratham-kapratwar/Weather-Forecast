@@ -1,0 +1,143 @@
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#loader2 {
+  width: 40px;
+  height: 40px;
+  margin: -75px 0 0 -75px;
+  border: 10px solid white;
+  border-radius: 50%;
+  border-top: 10px solid black;
+  animation: spin 3s linear;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.search {
+  display: inline-block;
+  background-color: black;
+  outline: none;
+  border-radius: 25px;
+  color: white;
+  animation-name: dance;
+  animation-duration: 2s;
+  font-size: 23px;
+}
+
+.search:hover {
+  background: lightseagreen;
+}
+
+.city {
+  padding: 5px;
+  color: white;
+  outline: none;
+  border-radius: 20px;
+  animation-name: dance;
+  animation-duration: 2s;
+  font-size: 22px;
+  background-color: black;
+}
+
+
+#tit {
+  color: black;
+  font-family: 'Ubuntu Mono';
+  animation-name: dance;
+  animation-duration: 2s;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes dance {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+#fetch {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  top: 10%;
+}
+
+#cright {
+  position: fixed;
+  top: 94%;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+#forecast {
+  background: #ffbf01;
+  box-shadow: 4px 1px 4px 6px black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: none;
+  padding: 10px;
+  font-family: 'Ubuntu Mono';
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#forecast:hover {
+  background: aqua;
+}
+
+
